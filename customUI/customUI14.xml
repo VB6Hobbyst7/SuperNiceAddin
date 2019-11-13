@@ -2,8 +2,9 @@
 <customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui">
 	<ribbon startFromScratch="false">
 		<tabs >
-			<tab id="tab1" 
+			<tab id="SuperTab" 
 				label="超棒插件">
+				<!--
 				<group id="grp1" 
 					label="数据整理" 
 					autoScale="true">
@@ -187,31 +188,17 @@
 						supertip="重新修复L盘，以免出现不能连接到数据库的情况。原理和GTS的工具一样，只是你可以一键修复了，不需要额外开一个GTS Tool" 
 						onAction="rptCallback"/>
 				</group >
-				<group id="Group5" 
-					label="JDT Enhanced Tool">
-					<button id="reloadcode" 
+				-->
+				<group id="help" 
+					label="帮助">
+					<button id="functionhelp" 
 						image="icons8-cloud-checked-30" 
-						label="重载代码" 
+						label="函数Wiki" 
 						size="large" 
-						supertip="如果不小心修改了ACL中JDT Enhanced Tool的代码，点这里重置。" 
-						onAction="jetCallback"/>
-					<button id="Button35" 
-						image="icons8-download-from-the-cloud-30" 
-						label="更新代码" 
-						size="large" 
-						supertip="检查是否可以更新ACL中的JDT Enhanced Tool的代码。" 
-						onAction="jetCallback"/>
-					<button id="Button41" 
-						image="icons8-high-risk-16" 
-						label="切换至开发版" 
-						supertip="更多功能，更多风险。" 
-						onAction="jetCallback"/>
-					<button id="Button42" 
-						image="icons8-low-risk-16" 
-						label="切换至稳定版" 
-						supertip="稳中求胜。" 
-						onAction="jetCallback"/>
+						supertip="不知道如何使用自定义函数？点这里。" 
+						onAction="mainCallback"/>
 				</group >
+				
 				<group id="about" 
 					label="关于" 
 					autoScale="false" 

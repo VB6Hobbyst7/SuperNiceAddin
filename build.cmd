@@ -1,1 +1,1 @@
-"C:\Program Files\Bandizip\bandizip.exe" c -fmt:zip -l:2 SuperNice.xlam "SuperNiceAddin"
+"C:\Program Files\Bandizip\bandizip.exe" a SuperNice.xlam "customUI"
