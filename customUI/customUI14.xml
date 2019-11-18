@@ -66,7 +66,7 @@
 					<button id="goDev" image="icons8-high-risk-16" label="启用开发模式" size="large" supertip="切换到开发模式来启用更多功能" onAction="mainCallback"/>
 				</group >
 				<group id="dev" label="超棒开发工具" getVisible="GetVisible" autoScale="false" centerVertically="true">
-					<button id="feedback1" image="icons8-comments-30" label="问题&amp;建议" size="large" supertip="有任何问题和建议，点此反馈。" onAction="mainCallback"/>
+					<button id="feedback1" image="icons8-export-30" label="导出所有代码" size="large" supertip="将所有代码导出，以便进行版本控制" onAction="mainCallback"/>
 				</group >
 			</tab >
 		</tabs >

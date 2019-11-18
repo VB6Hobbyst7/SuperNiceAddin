@@ -48,7 +48,7 @@ Sub feedback()
         & "%0d%0a%0d%0a[请问有什么建议或者问题呢？]%0d%0a"
 End Sub
 
-Sub myDebug()
+Sub MyDebug()
     'Debug模式
     If Environ("username") = "甘元浩" Then
         Call groupDevShow
