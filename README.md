@@ -30,15 +30,6 @@
 
 ____
 
-## 自定义函数的合集
+## 更多信息
 
-在SNA里面，我们自定义了一些超有用的函数，它们能够大大的简化日常工作中的麻烦程度。
-
-请[点击这里](/mattholy/SuperNiceAddin/wiki/Functions)来查看都有些什么函数，并且要如何使用他们。
-
------
-
-## 便捷功能
-TBD
-
-____
+请查阅[项目WiKi](https://github.com/mattholy/SuperNiceAddin/wiki)
