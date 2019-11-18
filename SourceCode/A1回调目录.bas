@@ -11,16 +11,17 @@ End Sub
 '主要回调函数
 '负责处理每个功能的调用
 
-Sub mainCallback(control As IRibbonControl)
-    Select Case control.ID
+Sub mainCallback(Control As IRibbonControl)
+    Select Case Control.ID
         Case "iupdate"
             Call update
         Case "feedback"
             Call feedback
-            
+        Case "goDev"
+            Call myDebug
         '其它
         Case Else
-            MsgBox "我点了" & control.ID
+            MsgBox "我点了" & Control.ID
             Call inDevNow
     End Select
 End Sub
