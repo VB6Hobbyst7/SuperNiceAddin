@@ -1,12 +1,9 @@
 # 超棒插件
 [![GitHub license](https://img.shields.io/github/license/mattholy/SuperNiceAddin)](https://github.com/mattholy/SuperNiceAddin/blob/master/LICENSE)
-
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/mattholy/SuperNiceAddin)
 ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/mattholy/SuperNiceAddin?include_prereleases)
-
 [![GitHub stars](https://img.shields.io/github/stars/mattholy/SuperNiceAddin?)](https://github.com/mattholy/SuperNiceAddin/stargazers)
 [![GitHub issues](https://img.shields.io/github/issues/mattholy/SuperNiceAddin)](https://github.com/mattholy/SuperNiceAddin/issues)
-
 ![GitHub All Releases](https://img.shields.io/github/downloads/mattholy/SuperNiceAddin/total)
 
 ## 什么是SuperNiceAddin
