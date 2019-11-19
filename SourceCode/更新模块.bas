@@ -2,9 +2,9 @@ Attribute VB_Name = "∏¸–¬ƒ£øÈ"
 Private Declare Function URLDownloadToFile Lib "urlmon" Alias "URLDownloadToFileA" (ByVal pCaller As Long, ByVal szURL As String, ByVal szFileName As String, ByVal dwReserved As Long, ByVal lpfnCB As Long) As Long
 Public Declare Function DeleteUrlCacheEntry Lib "wininet" Alias "DeleteUrlCacheEntryA" (ByVal lpszUrlName As String) As Long
 Sub updateFile()
- Dim nUrl As String, localFilename As String, lngRetVal As Long
-    nUrl = "https://github.com/mattholy/SuperNiceAddin/releases/download/v0.1a/SuperNice.xlam"
-    localFilename = Environ("userprofile") & "\Õº∆¨2.XLAM"
+    Dim nUrl As String, localFilename As String, lngRetVal As Long
+    nUrl = ThisWorkbook.Sheets("≈‰÷√").Range("≈‰÷√!C4").Value
+    localFilename = Environ("userprofile") & "\Desktop\SuperNiceAddin.xlam"
     lngRetVal = URLDownloadToFile(0, nUrl, localFilename, 0, 0)
     If lngRetVal = 0 Then
         DeleteUrlCacheEntry nUrl

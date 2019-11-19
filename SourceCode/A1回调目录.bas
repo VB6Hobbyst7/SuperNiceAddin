@@ -21,6 +21,8 @@ Sub mainCallback(Control As IRibbonControl)
             Call MyDebug
         Case "feedback1" '导出所有代码
             Call ExportAllVBC
+        Case "functionhelp"
+            Call towiki
         '其它
         Case Else
             MsgBox "我点了" & Control.ID

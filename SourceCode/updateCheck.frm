@@ -14,6 +14,17 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 
+Private Sub CommandButton1_Click()
+    Call updateFile
+    updateCheck.Hide
+    Choice = MsgBox("最新插件已经下载到了" & Environ("userprofile") & "\Desktop\SuperNiceAddin.xlam" & "，请关闭所有打开的Excel，并将最新文件移动到插件文件夹进行覆盖。" & Chr(10) & "是否需要打开插件文件夹", vbYesNo + vbInformation, "下载完成")
+    If Choice = vbYes Then
+        MsgBox "打开文件"
+    Else
+        MsgBox "不打开文件"
+    End If
+End Sub
+
 Private Sub CommandButton2_Click()
     updateCheck.Hide
 End Sub

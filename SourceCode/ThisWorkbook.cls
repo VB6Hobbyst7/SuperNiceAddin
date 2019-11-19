@@ -12,7 +12,7 @@ Private Sub Workbook_Open()
     Select Case Left(Application.OperatingSystem, 7)
         Case "Windows"
             '引导用户修改名称；默认名称无法使用插件
-            If Environ("username") = "JoJo" Then
+            If Environ("username") = "JOJO" Then
                 If MsgBox("请不要使用默认用户名登录，它会造成异常。" & Chr(13) & "是否前去修改用户名？", vbYesNo + vbCritical, "用户名冲突") = vbYes Then
                     Shell "cmd.exe /c  control userpasswords2"
                 End If
