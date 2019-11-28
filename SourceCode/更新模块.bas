@@ -3,7 +3,7 @@ Private Declare Function URLDownloadToFile Lib "urlmon" Alias "URLDownloadToFile
 Public Declare Function DeleteUrlCacheEntry Lib "wininet" Alias "DeleteUrlCacheEntryA" (ByVal lpszUrlName As String) As Long
 Sub updateFile()
     Dim nUrl As String, localFilename As String, lngRetVal As Long
-    nUrl = ThisWorkbook.Sheets("ÅäÖÃ").Range("ÅäÖÃ!C4").Value
+    nUrl = ThisWorkbook.Sheets("ÅäÖÃ").Range("ÅäÖÃ!C4").value
     localFilename = Environ("userprofile") & "\Desktop\SuperNiceAddin.xlam"
     lngRetVal = URLDownloadToFile(0, nUrl, localFilename, 0, 0)
     If lngRetVal = 0 Then

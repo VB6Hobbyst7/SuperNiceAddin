@@ -23,6 +23,8 @@ Sub mainCallback(Control As IRibbonControl)
             Call ExportAllVBC
         Case "functionhelp"
             Call towiki
+        Case "strmd5"
+            Call strmd5
         '其它
         Case Else
             MsgBox "我点了" & Control.ID

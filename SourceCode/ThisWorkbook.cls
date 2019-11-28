@@ -19,30 +19,30 @@ Private Sub Workbook_Open()
                 ThisWorkbook.Close
             End If
             '当前版本
-            ThisWorkbook.Sheets("配置").Range("配置!C1").Value = "1.0r"
+            ThisWorkbook.Sheets("配置").Range("配置!C1").value = "v0.2a"
             '设备信息
-            ThisWorkbook.Sheets("配置").Range("配置!C7").Value = Environ("username")
-            ThisWorkbook.Sheets("配置").Range("配置!C8").Value = Application.OperatingSystem
-            ThisWorkbook.Sheets("配置").Range("配置!C9").Value = Environ("computername")
+            ThisWorkbook.Sheets("配置").Range("配置!C7").value = Environ("username")
+            ThisWorkbook.Sheets("配置").Range("配置!C8").value = Application.OperatingSystem
+            ThisWorkbook.Sheets("配置").Range("配置!C9").value = Environ("computername")
             '网络信息
             strComputer = "."
             Set objWMI = GetObject("winmgmts:\\" & strComputer & "\root\cimv2")
             Set colIP = objWMI.ExecQuery("Select * from Win32_NetworkAdapterConfiguration where IPEnabled=TRUE")
             For Each IP In colIP
                 If Not IsNull(IP.IPAddress) Then
-                    For i = LBound(IP.IPAddress) To UBound(IP.IPAddress)
-                        LANstr = IP.Description(i)  '网卡名称
-                        ThisWorkbook.Sheets("配置").Range("配置!C1" & i + 1).Value = IP.IPAddress(i)  '网卡IP地址
-                        ThisWorkbook.Sheets("配置").Range("配置!C10").Value = IP.MacAddress      '网卡的MAC地址
+                    For I = LBound(IP.IPAddress) To UBound(IP.IPAddress)
+                        LANstr = IP.Description(I)  '网卡名称
+                        ThisWorkbook.Sheets("配置").Range("配置!C1" & I + 1).value = IP.IPAddress(I)  '网卡IP地址
+                        ThisWorkbook.Sheets("配置").Range("配置!C10").value = IP.MacAddress      '网卡的MAC地址
                     Next
                 End If
             Next
             '每天检查一次更新
-            If Now() - ThisWorkbook.Sheets("配置").Range("配置!C6").Value > 1 Then
+            If Now() - ThisWorkbook.Sheets("配置").Range("配置!C6").value > 1 Then
                 Call frechUpdateInfo
             End If
             '如果有更新则拉起更新对话框
-            If ThisWorkbook.Sheets("配置").Range("配置!C1").Value <> ThisWorkbook.Sheets("配置").Range("配置!C2").Value Then
+            If ThisWorkbook.Sheets("配置").Range("配置!C1").value <> ThisWorkbook.Sheets("配置").Range("配置!C2").value Then
                 Call update
             End If
         Case Else

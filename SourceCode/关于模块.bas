@@ -11,18 +11,18 @@ Public Sub frechUpdateInfo()
     http.setRequestHeader "CONTENT-TYPE", "application/x-www-form-urlencoded"
     http.SEND
     If http.Status = 200 Then
-        Set x = CreateObject("ScriptControl"): x.Language = "JScript"
-        Set updateInfo = x.eval("eval(" & http.responseText & ")")
+        Set X = CreateObject("ScriptControl"): X.Language = "JScript"
+        Set updateInfo = X.eval("eval(" & http.responseText & ")")
         itemversion = CallByName(updateInfo, "tag_name", VbGet)
         updateLog = CallByName(updateInfo, "body", VbGet)
         updateat = CallByName(updateInfo, "published_at", VbGet)
         item1name = CallByName(CallByName(CallByName(updateInfo, "assets", VbGet), "0", VbGet), "name", VbGet)
         item1url = CallByName(CallByName(CallByName(updateInfo, "assets", VbGet), "0", VbGet), "browser_download_url", VbGet)
-        ThisWorkbook.Sheets("≈‰÷√").Range("≈‰÷√!C4").Value = item1url
-        ThisWorkbook.Sheets("≈‰÷√").Range("≈‰÷√!C2").Value = itemversion
-        ThisWorkbook.Sheets("≈‰÷√").Range("≈‰÷√!C3").Value = updateLog
-        ThisWorkbook.Sheets("≈‰÷√").Range("≈‰÷√!C5").Value = Replace(Replace(updateat, "T", " "), "Z", "")
-        ThisWorkbook.Sheets("≈‰÷√").Range("≈‰÷√!C6").Value = Now()
+        ThisWorkbook.Sheets("≈‰÷√").Range("≈‰÷√!C4").value = item1url
+        ThisWorkbook.Sheets("≈‰÷√").Range("≈‰÷√!C2").value = itemversion
+        ThisWorkbook.Sheets("≈‰÷√").Range("≈‰÷√!C3").value = updateLog
+        ThisWorkbook.Sheets("≈‰÷√").Range("≈‰÷√!C5").value = Replace(Replace(updateat, "T", " "), "Z", "")
+        ThisWorkbook.Sheets("≈‰÷√").Range("≈‰÷√!C6").value = Now()
     Else
         MsgBox "”…”⁄Õ¯¬ÁŒ Ã‚£¨Œﬁ∑®∏¸–¬ ˝æ›°£" & vbNewLine & "¥ÌŒÛ¥˙¬Î£∫http." & http.Status, vbOKOnly + vbInformation, "∏¸–¬ ß∞‹"
     End If
@@ -30,13 +30,13 @@ End Sub
 
 Public Sub update()
     'ø™ º∏¸–¬
-    If ThisWorkbook.Sheets("≈‰÷√").Range("≈‰÷√!C1").Value = ThisWorkbook.Sheets("≈‰÷√").Range("≈‰÷√!C2").Value Then
+    If ThisWorkbook.Sheets("≈‰÷√").Range("≈‰÷√!C1").value = ThisWorkbook.Sheets("≈‰÷√").Range("≈‰÷√!C2").value Then
         MsgBox "∂‘≤ª∆£¨‘› ±√ª”–∏¸–¬ø…”√°£«Îπ˝∂Œ ±º‰‘Ÿ ‘°£", vbInformation, "‘›Œﬁ∏¸–¬"
     Else
-        updateCheck.currversion.Caption = ThisWorkbook.Sheets("≈‰÷√").Range("≈‰÷√!C1").Value
-        updateCheck.newversion.Caption = ThisWorkbook.Sheets("≈‰÷√").Range("≈‰÷√!C2").Value
-        updateCheck.updatetime.Caption = ThisWorkbook.Sheets("≈‰÷√").Range("≈‰÷√!C5").Value
-        updateCheck.updateLog.text = ThisWorkbook.Sheets("≈‰÷√").Range("≈‰÷√!C3").Value
+        updateCheck.currversion.Caption = ThisWorkbook.Sheets("≈‰÷√").Range("≈‰÷√!C1").value
+        updateCheck.newversion.Caption = ThisWorkbook.Sheets("≈‰÷√").Range("≈‰÷√!C2").value
+        updateCheck.updatetime.Caption = ThisWorkbook.Sheets("≈‰÷√").Range("≈‰÷√!C5").value
+        updateCheck.updateLog.text = ThisWorkbook.Sheets("≈‰÷√").Range("≈‰÷√!C3").value
         updateCheck.Show
     End If
 End Sub
@@ -44,7 +44,7 @@ End Sub
 Sub feedback()
     '∑¥¿°
     ThisWorkbook.FollowHyperlink "mailto:ganyuanhao@tinman.cn?subject=≥¨∞Ù≤Âº˛Œ Ã‚∑¥¿°”ÎΩ®“È&body=µ±«∞∞Ê±æ£∫" _
-        & ThisWorkbook.Sheets("≈‰÷√").Range("≈‰÷√!C1").Value _
+        & ThisWorkbook.Sheets("≈‰÷√").Range("≈‰÷√!C1").value _
         & "%0d%0a%0d%0a[«ÎŒ ”– ≤√¥Ω®“ÈªÚ’ﬂŒ Ã‚ƒÿ£ø]%0d%0a"
 End Sub
 

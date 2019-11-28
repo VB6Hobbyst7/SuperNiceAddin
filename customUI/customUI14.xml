@@ -48,12 +48,12 @@
 					<button id="fillsummary" image="fillsum" label="填写Summary" size="large" supertip="完全填写完整summary中的信息。但你还是需要检查一下。" onAction="etlCallback"/>
 					<button id="moveic" image="icons8-archive-folder-30" label="转移 IC Global并生成gcdm.zip" size="large" supertip="将ic_global.txt移动至相应的目录，并生成gcdm.zip。不需要麻烦重新打开acl。" onAction="etlCallback"/>
 				</group >
-				<group id="Group4" label="RA Power Tool">
-					<button id="refreshdata" image="icons8-repeat-30" label="刷新 Request数据" size="large" supertip="刷新RA Power Tool首页的数据。" onAction="rptCallback"/>
-					<button id="fixbug" image="icons8-maintenance-30" label="修复配置页面的错误" size="large" supertip="如果你魔改了配置页面导致了问题，点此重置。" onAction="rptCallback"/>
-					<button id="concheck" image="icons8-broken-link-30" label="修复数据库连接" size="large" supertip="重新修复L盘，以免出现不能连接到数据库的情况。原理和GTS的工具一样，只是你可以一键修复了，不需要额外开一个GTS Tool" onAction="rptCallback"/>
-				</group >
 				-->
+				<group id="DataRef" label="数据处理相关">
+					<button id="strmd5" image="icons8-repeat-30" label="计算MD5值" size="large" supertip="将所选内容转换成它的MD5形式" onAction="mainCallback"/>
+					
+				</group >
+				
 				<group id="archive" label="文档程序">
 					<button id="logMyWork" image="icons8-archive-folder-30" label="执行存档程序" size="large" supertip="将你所完成的工作存档，以便日后进行回顾，或者什么的" onAction="mainCallback"/>
 				</group >
