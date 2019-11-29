@@ -14,7 +14,7 @@ End Sub
 Sub mainCallback(Control As IRibbonControl)
     Select Case Control.ID
         Case "iupdate"
-            Call update
+            Call updateFromBar
         Case "feedback"
             Call feedback
         Case "goDev"
