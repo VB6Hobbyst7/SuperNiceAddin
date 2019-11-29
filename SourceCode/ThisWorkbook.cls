@@ -11,6 +11,12 @@ Private Sub Workbook_Open()
     '获取操作系统
     Select Case Left(Application.OperatingSystem, 7)
         Case "Windows"
+            '每次遇到新用户则清除原来的用户信息
+            If Environ("username") <> ThisWorkbook.Sheets("配置").Range("配置!C7").value Then
+                For Each Rng In ThisWorkbook.Sheets("配置").Range("配置!C1:C100")
+                    Rng.value = ""
+                Next
+            End If
             '引导用户修改名称；默认名称无法使用插件
             If Environ("username") = "JOJO" Then
                 If MsgBox("请不要使用默认用户名登录，它会造成异常。" & Chr(13) & "是否前去修改用户名？", vbYesNo + vbCritical, "用户名冲突") = vbYes Then
@@ -19,7 +25,7 @@ Private Sub Workbook_Open()
                 ThisWorkbook.Close
             End If
             '当前版本
-            ThisWorkbook.Sheets("配置").Range("配置!C1").value = "v0.2a"
+            ThisWorkbook.Sheets("配置").Range("配置!C1").value = "v0.3a"
             '设备信息
             ThisWorkbook.Sheets("配置").Range("配置!C7").value = Environ("username")
             ThisWorkbook.Sheets("配置").Range("配置!C8").value = Application.OperatingSystem
@@ -37,8 +43,8 @@ Private Sub Workbook_Open()
                     Next
                 End If
             Next
-            '每天检查一次更新
-            If Now() - ThisWorkbook.Sheets("配置").Range("配置!C6").value > 1 Then
+            '每两个半小时检查一次更新
+            If Now() - ThisWorkbook.Sheets("配置").Range("配置!C6").value > 0.1 Then
                 Call frechUpdateInfo
             End If
             '如果有更新则拉起更新对话框

@@ -66,3 +66,10 @@ End Sub
 Sub exitDebug()
     ThisWorkbook.IsAddin = True
 End Sub
+Sub updateFromBar()
+    Call frechUpdateInfo
+    Call update
+    If ThisWorkbook.Sheets("ÅäÖÃ").Range("ÅäÖÃ!C1").value <> ThisWorkbook.Sheets("ÅäÖÃ").Range("ÅäÖÃ!C2").value Then
+        updateCheck.Hide
+    End If
+End Sub

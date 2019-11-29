@@ -4,7 +4,7 @@ Public Declare Function DeleteUrlCacheEntry Lib "wininet" Alias "DeleteUrlCacheE
 Sub updateFile()
     Dim nUrl As String, localFilename As String, lngRetVal As Long
     nUrl = ThisWorkbook.Sheets("≈‰÷√").Range("≈‰÷√!C4").value
-    localFilename = Environ("userprofile") & "\Desktop\SuperNiceAddin.xlam"
+    localFilename = Environ("userprofile") & "\Desktop\SuperNice.xlam"
     lngRetVal = URLDownloadToFile(0, nUrl, localFilename, 0, 0)
     If lngRetVal = 0 Then
         DeleteUrlCacheEntry nUrl
