@@ -35,11 +35,11 @@ End Property
 Property Get RegisterD() As String
     RegisterD = State(4)
 End Property
-Public Function Md5_String_Calc(SourceString As String) As String
+Public Function MD5Str(SourceString As String) As String
     MD5Init
     MD5Update LenB(StrConv(SourceString, vbFromUnicode)), StringToArray(SourceString)
     MD5Final
-    Md5_String_Calc = GetValues
+    MD5Str = GetValues
 End Function
 Public Function Md5_File_Calc(InFile As String) As String
     On Error GoTo errorhandler
