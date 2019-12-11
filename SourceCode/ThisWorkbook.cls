@@ -25,7 +25,7 @@ Private Sub Workbook_Open()
                 ThisWorkbook.Close
             End If
             'µ±«∞∞Ê±æ
-            ThisWorkbook.Sheets("≈‰÷√").Range("≈‰÷√!C1").value = "v0.3c"
+            ThisWorkbook.Sheets("≈‰÷√").Range("≈‰÷√!C1").value = "v0.4a"
             '…Ë±∏–≈œ¢
             ThisWorkbook.Sheets("≈‰÷√").Range("≈‰÷√!C7").value = Environ("username")
             ThisWorkbook.Sheets("≈‰÷√").Range("≈‰÷√!C8").value = Application.OperatingSystem
