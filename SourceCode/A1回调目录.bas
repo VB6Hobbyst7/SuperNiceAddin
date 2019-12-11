@@ -25,6 +25,10 @@ Sub mainCallback(Control As IRibbonControl)
             Call towiki
         Case "strmd5"
             Call strmd5
+        Case "iclean"
+            Call iclean
+        Case "totext"
+            Call totext
         '其它
         Case Else
             MsgBox "我点了" & Control.ID

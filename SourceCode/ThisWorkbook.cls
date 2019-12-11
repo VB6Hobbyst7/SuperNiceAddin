@@ -36,9 +36,9 @@ Private Sub Workbook_Open()
             Set colIP = objWMI.ExecQuery("Select * from Win32_NetworkAdapterConfiguration where IPEnabled=TRUE")
             For Each IP In colIP
                 If Not IsNull(IP.IPAddress) Then
-                    For I = LBound(IP.IPAddress) To UBound(IP.IPAddress)
-                        LANstr = IP.Description(I)  'Õ¯ø®√˚≥∆
-                        ThisWorkbook.Sheets("≈‰÷√").Range("≈‰÷√!C1" & I + 1).value = IP.IPAddress(I)  'Õ¯ø®IPµÿ÷∑
+                    For i = LBound(IP.IPAddress) To UBound(IP.IPAddress)
+                        LANstr = IP.Description(i)  'Õ¯ø®√˚≥∆
+                        ThisWorkbook.Sheets("≈‰÷√").Range("≈‰÷√!C1" & i + 1).value = IP.IPAddress(i)  'Õ¯ø®IPµÿ÷∑
                         ThisWorkbook.Sheets("≈‰÷√").Range("≈‰÷√!C10").value = IP.MacAddress      'Õ¯ø®µƒMACµÿ÷∑
                     Next
                 End If

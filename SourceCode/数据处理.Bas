@@ -6,3 +6,23 @@ Sub strmd5()
         End If
     Next
 End Sub
+
+'数据清洗
+Sub iclean()
+    Dim i As Integer
+    With Selection
+        For i = .Count To 1 Step -1
+            .Cells(i) = Application.Clean(.Cells(i))
+            .Cells(i) = Application.Trim(.Cells(i))
+        Next i
+    End With
+End Sub
+
+'转成字符串
+Sub totext()
+    With Selection
+        For i = .Count To 1 Step -1
+            .Cells(i).Value2 = "'" + Trim(Str(.Cells(i).Value2))
+        Next i
+    End With
+End Sub

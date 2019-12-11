@@ -68,7 +68,7 @@ begin:
     Md5_File_Calc = GetValues
 End Function
 Private Function StringToArray(InString As String) As Byte()
-    Dim I As Integer, bytBuffer() As Byte
+    Dim i As Integer, bytBuffer() As Byte
     ReDim bytBuffer(LenB(StrConv(InString, vbFromUnicode)))
     bytBuffer = StrConv(InString, vbFromUnicode)
     StringToArray = bytBuffer
@@ -113,7 +113,7 @@ Public Sub MD5Final()
     MD5Update 8, padding
 End Sub
 Public Sub MD5Update(InputLen As Long, InputBuffer() As Byte)
-    Dim II As Integer, I As Integer, J As Integer, K As Integer, lngBufferedBytes As Long, lngBufferRemaining As Long, lngRem As Long
+    Dim II As Integer, i As Integer, J As Integer, K As Integer, lngBufferedBytes As Long, lngBufferRemaining As Long, lngRem As Long
 
     lngBufferedBytes = ByteCounter Mod 64
     lngBufferRemaining = 64 - lngBufferedBytes
@@ -125,18 +125,18 @@ Public Sub MD5Update(InputLen As Long, InputBuffer() As Byte)
         Next II
         MD5Transform ByteBuffer
         lngRem = (InputLen) Mod 64
-        For I = lngBufferRemaining To InputLen - II - lngRem Step 64
+        For i = lngBufferRemaining To InputLen - II - lngRem Step 64
             For J = 0 To 63
-                ByteBuffer(J) = InputBuffer(I + J)
+                ByteBuffer(J) = InputBuffer(i + J)
             Next J
             MD5Transform ByteBuffer
-        Next I
+        Next i
         lngBufferedBytes = 0
     Else
-        I = 0
+        i = 0
     End If
-    For K = 0 To InputLen - I - 1
-        ByteBuffer(lngBufferedBytes + K) = InputBuffer(I + K)
+    For K = 0 To InputLen - i - 1
+        ByteBuffer(lngBufferedBytes + K) = InputBuffer(i + K)
     Next K
 End Sub
 Private Sub MD5Transform(Buffer() As Byte)

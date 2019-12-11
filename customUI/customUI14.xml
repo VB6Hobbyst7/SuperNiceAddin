@@ -51,7 +51,8 @@
 				-->
 				<group id="DataRef" label="数据处理相关">
 					<button id="strmd5" image="icons8-repeat-30" label="计算MD5值" size="large" supertip="将所选内容转换成它的MD5形式" onAction="mainCallback"/>
-					
+					<button id="iclean" image="dataclean" label="数据清洗" size="large" supertip="清除所选区域中的不可见字符，以及两端的空格。" onAction="mainCallback"/>
+					<button id="totext" image="totext" label="转换为文本" size="large" supertip="强制将所选内容转换为文本格式，以确保在传输过程中不会出现诸如科学计数法一类的错误。" onAction="mainCallback"/>
 				</group >
 				
 				<group id="archive" label="文档程序">
