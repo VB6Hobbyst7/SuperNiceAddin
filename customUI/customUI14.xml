@@ -57,6 +57,7 @@
 				
 				<group id="archive" label="文档程序">
 					<button id="logMyWork" image="icons8-archive-folder-30" label="执行存档程序" size="large" supertip="将你所完成的工作存档，以便日后进行回顾，或者什么的" onAction="mainCallback"/>
+					<button id="report" image="icons8-document-32" label="生成报表模板" size="large" supertip="生成一个标准的报表模板，你可以在上面完成报表工作。适" onAction="mainCallback"/>
 				</group >
 				<group id="help" label="帮助">
 					<button id="functionhelp" image="icons8-cloud-checked-30" label="函数Wiki" size="large" supertip="不知道如何使用自定义函数？点这里。" onAction="mainCallback"/>
