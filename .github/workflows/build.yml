@@ -2,7 +2,7 @@ name: Autobuild After Push
 on: [push]
 jobs:
   build:
-    runs-on：windows-2019
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v1
       - name: Run a one-line script
