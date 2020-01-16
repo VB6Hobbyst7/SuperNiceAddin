@@ -1,13 +1,9 @@
 name: Autobuild After Push
-
 on: [push]
-
 jobs:
   build:
-
     runs-on：windows-2019
-
     steps:
-    - uses: actions/checkout@v1
-    - name: Run a one-line script
-      run: echo Hello, world!
+      - uses: actions/checkout@v1
+      - name: Run a one-line script
+      - run: echo Hello, world!
