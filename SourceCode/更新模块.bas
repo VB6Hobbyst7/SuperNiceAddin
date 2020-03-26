@@ -10,6 +10,6 @@ Sub updateFile()
         DeleteUrlCacheEntry nUrl
     End If
 End Sub
-Sub A()
+Sub a()
 MsgBox Environ("HOMEPATH")
 End Sub

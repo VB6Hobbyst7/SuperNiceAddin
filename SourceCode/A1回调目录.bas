@@ -29,6 +29,8 @@ Sub mainCallback(Control As IRibbonControl)
             Call iclean
         Case "totext"
             Call totext
+        Case "report"
+            Call report
         '其它
         Case Else
             MsgBox "我点了" & Control.ID

@@ -9,7 +9,7 @@ End Sub
 
 'Êý¾ÝÇåÏ´
 Sub iclean()
-    Dim i As Integer
+    Dim i
     With Selection
         For i = .Count To 1 Step -1
             .Cells(i) = Application.Clean(.Cells(i))
@@ -26,3 +26,5 @@ Sub totext()
         Next i
     End With
 End Sub
+
+

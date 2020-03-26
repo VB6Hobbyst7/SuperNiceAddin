@@ -27,5 +27,14 @@ Public Function SplitPath(Fullpath As String, ResultFlag As Integer) As String
     End Select
 End Function
 
+'sha-256º”√‹
+Public Function SHA256Str(sMessage As String)
 
+    Dim clsX As CSHA256
+    Set clsX = New CSHA256
 
+    SHA256Str = clsX.SHA256(sMessage)
+
+    Set clsX = Nothing
+
+End Function

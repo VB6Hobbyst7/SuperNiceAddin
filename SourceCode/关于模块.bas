@@ -11,8 +11,8 @@ Public Sub frechUpdateInfo()
     http.setRequestHeader "CONTENT-TYPE", "application/x-www-form-urlencoded"
     http.SEND
     If http.Status = 200 Then
-        Set X = CreateObject("ScriptControl"): X.Language = "JScript"
-        Set updateInfo = X.eval("eval(" & http.responseText & ")")
+        Set x = CreateObject("ScriptControl"): x.Language = "JScript"
+        Set updateInfo = x.eval("eval(" & http.responseText & ")")
         itemversion = CallByName(updateInfo, "tag_name", VbGet)
         updateLog = CallByName(updateInfo, "body", VbGet)
         updateat = CallByName(updateInfo, "published_at", VbGet)
